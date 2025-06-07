@@ -20,19 +20,19 @@ async function carregarFornecedores() {
       return;
     }
 
-    fornecedores.forEach(f => {
+fornecedores.forEach(f => {
       const tr = document.createElement('tr');
         tr.innerHTML = `
-        <td>${p.id}</td>
-        <td>${p.NomedaEmpresa}</td>
-        <td>${p.cnpj}</td>
-        <td>${p.Endereço}</td>
-        <td>${p.Telefone}</td>
-        <td>${p.Email}</td>
-        <td>${p.Contato}</td>
+        <td>${f.id}</td>
+        <td>${f.nome}</td>
+        <td>${f.cnpj}</td>
+        <td>${f.endereco}</td>
+        <td>${f.telefone}</td>
+        <td>${f.email}</td>
+        <td>${f.contato}</td>
         <td>
-          <button onclick="editarFornecedor(${p.id})">Editar</button>
-          <button onclick="excluirFornecedor(${p.id})">Excluir</button>
+          <button onclick="editarFornecedor(${f.id})">Editar</button>
+          <button onclick="excluirFornecedor(${f.id})">Excluir</button>
         </td>
       `;
       tabela.appendChild(tr);
@@ -49,7 +49,7 @@ async function excluirFornecedor(id) {
     await fetch(`http://localhost:3001/fornecedores/${id}`, {
       method: 'DELETE'
     });
-    carregarProdutos();
+    carregarFornecedores();
   }
 }
 
