@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Associar Fornecedores</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Estilos adicionais para esta página específica */
+    .fornecedor-item {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      border: 1px solid #eee;
+    }
+    .fornecedor-item input {
+      margin-right: 10px;
+    }
+    #btn-salvar {
+      background-color: #007BFF; /* Azul */
+    }
+    #btn-salvar:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Associar Fornecedores ao Produto:</h2>
+    <h1 id="nome-produto">Carregando...</h1>
+
+    <form id="form-associacao">
+      <h3>Selecione os Fornecedores:</h3>
+      
+      <div id="lista-fornecedores">
+        <p>Carregando fornecedores...</p>
+      </div>
+      
+      <button type="submit" id="btn-salvar" class="btn-adicionar" style="width: 100%; margin-top: 20px;">
+        Salvar Associações
+      </button>
+    </form>
+    
+  </div>
+
+  <script src="js/associacao.js"></script>
+</body>
+</html>

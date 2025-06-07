@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos Gerais do Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilos do Título */
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Estilos do Formulário */
+#form-fornecedor {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Estilos dos Inputs de Texto e Email */
+#form-fornecedor input[type="text"],
+#form-fornecedor input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #555;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+#form-fornecedor input[type="text"]:focus,
+#form-fornecedor input[type="email"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Estilos do Botão de Submit */
+#form-fornecedor button[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#form-fornecedor button[type="submit"]:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    #form-fornecedor {
+        padding: 25px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        gap: 15px;
+    }
+
+    #form-fornecedor input[type="text"],
+    #form-fornecedor input[type="email"],
+    #form-fornecedor button[type="submit"] {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos Gerais do Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilos do Título */
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Estilos do Formulário */
+#form-produto {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 550px; /* Um pouco mais largo para o campo de descrição/select */
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Espaçamento entre os campos */
+}
+
+/* Estilos dos Inputs de Texto, Número, Data e Select */
+#form-produto input[type="text"],
+#form-produto input[type="number"],
+#form-produto input[type="date"],
+#form-produto select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #555;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    -webkit-appearance: none; /* Remove estilo padrão em navegadores WebKit */
+    -moz-appearance: none; /* Remove estilo padrão em navegadores Mozilla */
+    appearance: none; /* Remove estilo padrão */
+    background-color: #fff; /* Garante que o fundo seja branco para select */
+}
+
+/* Estilos para o campo de Descrição (textarea) */
+#form-produto textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #555;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Altura mínima */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Estilos de Foco para Inputs e Textarea */
+#form-produto input:focus,
+#form-produto textarea:focus,
+#form-produto select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Estilo para o Input de Arquivo (imagem) */
+#form-produto input[type="file"] {
+    border: 1px solid #ddd; /* Adiciona uma borda */
+    padding: 12px; /* Ajusta o padding para o input de arquivo */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Um fundo levemente diferente */
+    cursor: pointer;
+}
+
+/* Estilos do Botão de Submit */
+#form-produto button[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#form-produto button[type="submit"]:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    #form-produto {
+        padding: 25px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        gap: 15px;
+    }
+
+    #form-produto input,
+    #form-produto textarea,
+    #form-produto select,
+    #form-produto button[type="submit"] {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos Gerais do Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e8f5e9; /* Um verde bem suave para o fundo, mais convidativo */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilos do Título */
+h2 {
+    color: #1a5276; /* Um azul marinho profundo para o título */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 2.2em; /* Título um pouco maior */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15); /* Sombra mais pronunciada */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos Gerais do Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e8f5e9; /* Verde bem suave para o fundo */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilos do Título */
+h2 {
+    color: #1a5276; /* Azul marinho profundo para o título */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+
+
+/* --- Estilos da Tabela de Produtos --- */
+#tabela-produtos {
+    width: 95%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Animação para a tabela */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o cabeçalho da tabela */
+#tabela-produtos thead th {
+    background-color: #4CAF50; /* Verde vibrante para o cabeçalho */
+    color: white;
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.1em;
+    border-bottom: 3px solid #388E3C;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Linha vertical mais clara */
+}
+
+/* Remove a linha vertical da última coluna do cabeçalho */
+#tabela-produtos thead th:last-child {
+    border-right: none;
+}
+
+/* Estilos para as células do corpo da tabela */
+#tabela-produtos tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0; /* Borda inferior sutil */
+    border-right: 1px solid #f0f0f0; /* Linha vertical mais clara para as colunas */
+    text-align: left;
+    color: #444;
+    font-size: 0.98em;
+}
+
+/* Remove a linha vertical da última coluna do corpo */
+#tabela-produtos tbody td:last-child {
+    border-right: none;
+}
+
+/* Estilo para linhas pares (zebra striping) */
+#tabela-produtos tbody tr:nth-child(even) {
+    background-color: #f0fdf0; /* Verde bem clarinho para linhas pares */
+}
+
+/* Efeito de hover nas linhas da tabela */
+#tabela-produtos tbody tr:hover {
+    background-color: #e6ffe6; /* Verde claro mais intenso ao passar o mouse */
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Estilo para a imagem do produto na tabela */
+#tabela-produtos tbody td img {
+    max-width: 70px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+#tabela-produtos tbody td img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para os botões de ação na tabela */
+#tabela-produtos .acoes-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-right: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra para dar profundidade aos botões */
+    text-transform: uppercase; /* Texto dos botões em maiúsculas */
+    letter-spacing: 0.5px;
+}
+
+#tabela-produtos .acoes-btn.editar {
+    background-color: #FFC107; /* Amarelo vibrante para o Editar */
+    color: #333; /* Texto escuro para melhor contraste */
+    border: 1px solid #FFA000; /* Borda para o botão */
+}
+
+#tabela-produtos .acoes-btn.editar:hover {
+    background-color: #FFA000; /* Amarelo mais escuro ao hover */
+    transform: translateY(-2px) scale(1.02); /* Leve zoom e levantamento */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3); /* Sombra mais acentuada no hover */
+}
+
+#tabela-produtos .acoes-btn.excluir {
+    background-color: #F44336; /* Vermelho forte para o Excluir */
+    color: white;
+    border: 1px solid #D32F2F; /* Borda para o botão */
+}
+
+#tabela-produtos .acoes-btn.excluir:hover {
+    background-color: #D32F2F; /* Vermelho mais escuro ao hover */
+    transform: translateY(-2px) scale(1.02); /* Leve zoom e levantamento */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3); /* Sombra mais acentuada no hover */
+}
+
+/* --- Estilos Responsivos para a Tabela --- */
+@media (max-width: 768px) {
+    #tabela-produtos {
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Esconde o cabeçalho da tabela */
+    #tabela-produtos thead {
+        display: none;
+    }
+
+    /* Transforma as linhas da tabela em blocos */
+    #tabela-produtos, #tabela-produtos tbody, #tabela-produtos tr, #tabela-produtos td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Estilo para cada célula para exibir o cabeçalho como um pseudo-elemento */
+    #tabela-produtos tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        background-color: #fff;
+    }
+
+    #tabela-produtos tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none; /* Remove bordas internas das células no modo mobile */
+        font-size: 0.9em;
+    }
+
+    /* Adiciona o "cabeçalho" da coluna como um pseudo-elemento */
+    #tabela-produtos tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: 700;
+        text-align: left;
+        color: #546E7A;
+    }
+
+    /* Ajustes específicos para a coluna de imagem e ações */
+    #tabela-produtos tbody td:nth-of-type(8) { /* Coluna da Imagem */
+        text-align: center;
+        padding-left: 0;
+    }
+    #tabela-produtos tbody td:nth-of-type(8):before {
+        content: "";
+    }
+
+    #tabela-produtos tbody td:nth-of-type(9) { /* Coluna de Ações */
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #tabela-produtos tbody td:nth-of-type(9):before {
+        content: "";
+    }
+
+    #tabela-produtos .acoes-btn {
+        margin: 5px;
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+}
+
+/* --- Estilos Gerais e Reset --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* --- Container para centralizar o conteúdo --- */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Título da página --- */
+h2 {
+  text-align: center;
+  color: #005A9C; /* Azul escuro e sóbrio */
+  margin-bottom: 30px;
+  font-size: 2.2em;
+}
+
+/* --- Estilo da Tabela de Fornecedores (usando o ID do seu HTML) --- */
+#tabela-fornecedores {
+  width: 100%;
+  border-collapse: collapse; /* Remove o espaço entre as bordas */
+  margin-top: 20px;
+}
+
+/* Cabeçalho da Tabela */
+#tabela-fornecedores th {
+  background-color: #007BFF; /* Azul principal e vibrante */
+  color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Células da Tabela */
+#tabela-fornecedores td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Efeito de hover nas linhas do corpo da tabela */
+#tabela-fornecedores tbody tr:hover {
+  background-color: #eaf6ff; /* Azul bem clarinho */
+}
+
+/* Deixa a primeira coluna (ID) com uma largura fixa e centralizada */
+#tabela-fornecedores th:first-child,
+#tabela-fornecedores td:first-child {
+  width: 80px;
+  text-align: center;
+}
+
+/* Deixa a segunda coluna (Nome da Empresa) com texto mais destacado */
+#tabela-fornecedores td:nth-child(2) {
+  font-weight: bold;
+  color: #005A9C;
+}
+
+/* Adicionei também um estilo para um botão, caso queira adicionar um no futuro */
+.btn-adicionar {
+  display: block;
+  width: 200px;
+  margin: 30px auto 0;
+  padding: 12px 20px;
+  background-color: #28a745; /* Verde para uma ação positiva */
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-adicionar:hover {
+  background-color: #218838; /* Verde mais escuro */
+}

@@ -1,0 +1,94 @@
+/* Importa uma fonte do Google Fonts para um visual mais moderno */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto */
+    margin: 0; /* Remove margens padrão do body */
+    padding: 0; /* Remove preenchimento padrão do body */
+    background-color: #f0f0f0; /*  fundo */
+    color: #292929; /* Cor de texto principal */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
+}
+
+/* Estilo para o título principal (h1) */
+h1 {
+    color: #2c3e50; /* Um azul escuro para o título */
+    text-align: center; /* Centraliza o texto do título */
+    padding: 30px 0; /* Espaçamento superior e inferior */
+    margin-bottom: 20px; /* Margem abaixo do título */
+    font-size: 2.5em; /* Tamanho da fonte maior */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra sutil no texto */
+}
+
+/* Estilo para a barra de navegação (nav) */
+nav {
+    background-color: #3498db; /* Um azul vibrante para a barra de navegação */
+    padding: 15px 0; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para profundidade */
+    width: 90%; /* Largura da navegação */
+    max-width: 800px; /* Largura máxima */
+    margin-bottom: 30px; /* Espaçamento abaixo da nav */
+}
+
+/* Estilo para a lista não ordenada (ul) dentro da navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex; /* Transforma os itens em flexbox para alinhamento horizontal */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 25px; /* Espaçamento entre os itens da lista */
+}
+
+/* Estilo para cada item da lista (li) */
+nav ul li {
+    display: inline-block; /* Garante que os itens fiquem na mesma linha */
+}
+
+/* Estilo para os links (a) dentro da navegação */
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #fff; /* Cor do texto dos links branca */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1em; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave ao hover */
+}
+
+/* Efeito de hover nos links */
+nav ul li a:hover {
+    background-color: #2980b9; /* Um azul mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de "levantar" ao passar o mouse */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil ao passar o mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Reduz o tamanho do título em telas menores */
+        padding: 20px 0;
+    }
+
+    nav {
+        width: 95%; /* Aumenta a largura da navegação em telas menores */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os itens da navegação em telas menores */
+        align-items: center; /* Centraliza os itens verticalmente */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Ajusta o padding dos links */
+        width: 100%; /* Ocupa a largura total disponível */
+        text-align: center; /* Centraliza o texto */
+    }
+}
